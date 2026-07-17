@@ -91,12 +91,12 @@ async function json(url) {
 
 async function loadData() {
   try {
-    const [state, events] = await Promise.all([json('/api/state'), json('/api/events')]);
-    const receipt = await json('/api/receipt').catch(() => null);
-    const integrity = await json('/api/integrity').catch(() => ({ integrity: false }));
+    const [state, events] = await Promise.all([json('./api/state'), json('./api/events')]);
+    const receipt = await json('./api/receipt').catch(() => null);
+    const integrity = await json('./api/integrity').catch(() => ({ integrity: false }));
     return { state, events, receipt, integrity: integrity.integrity };
   } catch (error) {
-    if (error.url === '/api/state' && error.status === 404 && error.payload?.error === 'state_not_found') {
+    if (error.url === './api/state' && error.status === 404 && error.payload?.error === 'state_not_found') {
       return {
         state: { status: 'not_started', objective: 'No run state yet', iteration: 0, maxIterations: 0 },
         events: [],
@@ -105,7 +105,7 @@ async function loadData() {
       };
     }
     if (error.payload) throw error;
-    return json('/demo-data.json');
+    return json('./demo-data.json');
   }
 }
 

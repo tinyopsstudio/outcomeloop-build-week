@@ -6,6 +6,8 @@ OutcomeLoop keeps one GPT-5.6 Codex session moving until a user-supplied externa
 
 ![OutcomeLoop dashboard showing a verified four-turn GPT-5.6 run](docs/dashboard.png)
 
+[Open the live verified demo](https://tinyopsstudio.github.io/outcomeloop/)
+
 ## Why
 
 Long-running agents can finish a turn for reasons that have nothing to do with the real objective: context compaction, a transient error, a handoff-shaped summary, or a confident but premature claim. The process exits, while the outcome remains false.
