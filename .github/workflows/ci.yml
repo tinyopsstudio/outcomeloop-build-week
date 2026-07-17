@@ -19,7 +19,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+      - run: npm run check
+
+  sandbox:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
       - name: Install pinned Codex CLI
         run: npm install --global @openai/codex@0.144.5
-      - run: npm run check
       - run: npm run test:sandbox
