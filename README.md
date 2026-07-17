@@ -78,6 +78,13 @@ GPT-5.6 does the semantic work: inspect the environment, choose actions, edit fi
 
 No npm dependencies are required.
 
+### Supported Platforms
+
+- **Tested live:** macOS with Node.js 20+ and Codex CLI 0.144+ custom permission profiles.
+- **CI and package tests:** Linux on GitHub Actions runs the deterministic controller, receipt, integrity, and dashboard suites.
+- **Browser demo:** Any current desktop or mobile browser can inspect the verified run without installing the project.
+- **Not yet a live-sandbox target:** Windows. The portable process helpers cover Windows behavior, but the full verifier isolation path currently depends on Codex custom permission profiles.
+
 ## Install The CLI
 
 ```bash
@@ -189,6 +196,12 @@ OutcomeLoop does not make an unsafe objective safe or prove that a weak verifier
 ## OpenAI Build Week
 
 OutcomeLoop was created during the July 13-21, 2026 submission period for the **Developer Tools** track. The project uses Codex and GPT-5.6 as required by the [official challenge](https://openai.devpost.com/) and includes a public repository, MIT license, runnable demo, setup instructions, test suite, development evidence, and a public sub-three-minute video.
+
+### How We Built It With Codex
+
+Codex implemented and repeatedly reviewed the controller, resume flow, agent and verifier sandboxes, protected-path fingerprints, signed receipts, dashboard, plugin packaging, and regression suite in one primary development task. It accelerated the work most during adversarial review: generated tests exposed process-tree leaks, forged child exits, mutable verifier dependencies, signing-key access, strict-schema failures, and resume-command mistakes, then Codex repaired each issue against live evidence.
+
+GPT-5.6 Terra is also part of the product, not just the development process. In the published acceptance run it kept one stateful Codex session alive across four turns, interpreted three different verifier failures, responded to challenges generated only after prior turns, and continued until the external verifier passed. We made the key product decision that deterministic code, rather than an agent message, owns completion, gate acceptance, protected inputs, and the final signed receipt. The detailed dated evidence and primary-session context are in [Build Week evidence](docs/build-week-evidence.md).
 
 - [Watch the demo](https://www.youtube.com/watch?v=IaR34oyWNbc)
 - [Stable v0.1.1 release](https://github.com/tinyopsstudio/outcomeloop-build-week/releases/tag/v0.1.1)
