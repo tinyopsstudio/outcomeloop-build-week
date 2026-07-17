@@ -10,6 +10,8 @@ OutcomeLoop keeps one GPT-5.6 Codex session moving until a user-supplied externa
 
 [Open the live verified demo](https://tinyopsstudio.github.io/outcomeloop-build-week/)
 
+Putting OutcomeLoop into an existing repository? TinyOps Studio offers a fixed [$1,000 production integration sprint](https://whop.com/joined/tinyops-studio-llc/products/ai-agent-workflow-sprint/) for custom verifier adapters, CI wiring, and rollout.
+
 ## Why
 
 Long-running agents can finish a turn for reasons that have nothing to do with the real objective: context compaction, a transient error, a handoff-shaped summary, or a confident but premature claim. The process exits, while the outcome remains false.

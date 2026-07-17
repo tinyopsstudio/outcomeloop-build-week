@@ -1,6 +1,6 @@
 {
   "name": "@tinyopsstudio/outcomeloop",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An outcome-verified watchdog for long-running Codex work.",
   "type": "module",
   "private": false,
@@ -36,6 +36,7 @@
     "long-running-agent"
   ],
   "author": "TinyOps Studio LLC",
+  "funding": "https://whop.com/joined/tinyops-studio-llc/products/ai-agent-workflow-sprint/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tinyopsstudio/outcomeloop-build-week.git"
