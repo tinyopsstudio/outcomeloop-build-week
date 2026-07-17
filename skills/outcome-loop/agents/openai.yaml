@@ -1,0 +1,10 @@
+interface:
+  display_name: "OutcomeLoop"
+  short_description: "Keep Codex working until evidence passes"
+  icon_small: "./assets/outcomeloop-mark.svg"
+  icon_large: "./assets/outcomeloop-mark.svg"
+  brand_color: "#17A673"
+  default_prompt: "Use $outcome-loop to define an external completion check and keep working until it passes."
+
+policy:
+  allow_implicit_invocation: true

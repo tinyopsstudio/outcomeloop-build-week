@@ -1,0 +1,19 @@
+{
+  "name": "outcomeloop",
+  "version": "0.1.0",
+  "description": "Keep Codex working until external evidence proves the outcome.",
+  "author": {
+    "name": "TinyOps Studio LLC",
+    "url": "https://tinyopsstudio.com"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OutcomeLoop",
+    "shortDescription": "Run Codex until an external verifier passes.",
+    "longDescription": "OutcomeLoop resumes GPT-5.6 Codex sessions after premature stops and accepts completion only when a deterministic verifier succeeds.",
+    "developerName": "TinyOps Studio LLC",
+    "category": "Developer Tools",
+    "capabilities": ["long-running tasks", "external verification", "durable checkpoints"],
+    "defaultPrompt": "Use OutcomeLoop to turn this goal into a verified completion contract and keep working until it passes."
+  }
+}

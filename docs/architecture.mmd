@@ -1,0 +1,15 @@
+flowchart LR
+    C[Outcome contract] --> R[Deterministic runner]
+    R --> A[Least-privilege agent sandbox]
+    A --> G[GPT-5.6 Codex session]
+    G --> W[Writable workspace]
+    R --> S[Least-privilege verifier sandbox]
+    S --> V[External verifier]
+    V -->|fails with evidence| R
+    R -->|resume same session| A
+    V -->|passes| P[Sealed receipt]
+    P --> D[Run dashboard]
+    F[Protected file fingerprints] --> R
+    I[Clean environment + no network] --> A
+    I --> S
+    K[Controller Ed25519 identity] --> P

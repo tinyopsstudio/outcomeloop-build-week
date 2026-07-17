@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="OutcomeLoop run timeline and verification receipt">
+    <title>OutcomeLoop</title>
+    <link rel="icon" href="/outcomeloop-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="OutcomeLoop home">
+        <img src="/outcomeloop-mark.svg" width="34" height="34" alt="">
+        <span>OutcomeLoop</span>
+      </a>
+      <div class="header-actions">
+        <span id="model" class="model">GPT-5.6</span>
+        <button id="refresh" type="button">Refresh</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="status-band" aria-labelledby="objective-label">
+        <div class="status-copy">
+          <p id="objective-label" class="eyebrow">Objective</p>
+          <h1 id="objective">Loading run state</h1>
+        </div>
+        <div id="status-pill" class="status-pill" data-status="loading">Loading</div>
+      </section>
+
+      <section class="metrics" aria-label="Run metrics">
+        <div><span>Iterations</span><strong id="iterations">-</strong></div>
+        <div><span>Elapsed</span><strong id="elapsed">-</strong></div>
+        <div><span>Verifier</span><strong id="verifier">-</strong></div>
+        <div><span>Receipt</span><strong id="integrity">-</strong></div>
+      </section>
+
+      <div class="workspace-grid">
+        <section class="timeline-section" aria-labelledby="timeline-heading">
+          <div class="section-heading">
+            <h2 id="timeline-heading">Run timeline</h2>
+            <span id="event-count">0 events</span>
+          </div>
+          <ol id="timeline" class="timeline" aria-live="polite"></ol>
+        </section>
+
+        <aside>
+          <section class="side-section" aria-labelledby="report-heading">
+            <h2 id="report-heading">Latest report</h2>
+            <p id="report-summary" class="primary-copy">No report yet.</p>
+            <dl>
+              <div><dt>Agent state</dt><dd id="agent-state">-</dd></div>
+              <div><dt>Next action</dt><dd id="next-action">-</dd></div>
+            </dl>
+          </section>
+
+          <section class="side-section" aria-labelledby="proof-heading">
+            <h2 id="proof-heading">Verification</h2>
+            <dl>
+              <div><dt>Exit code</dt><dd id="exit-code">-</dd></div>
+              <div><dt>Duration</dt><dd id="verify-duration">-</dd></div>
+              <div><dt>Output hash</dt><dd id="output-hash" class="mono">-</dd></div>
+              <div><dt>Receipt hash</dt><dd id="receipt-hash" class="mono">-</dd></div>
+            </dl>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <span>External evidence is authoritative.</span>
+      <span id="updated">Not updated</span>
+    </footer>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

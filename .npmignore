@@ -1,0 +1,7 @@
+.demo/
+.git/
+.github/
+.outcomeloop/
+.test-data/
+node_modules/
+npm-debug.log*

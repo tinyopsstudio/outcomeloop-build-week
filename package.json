@@ -1,0 +1,37 @@
+{
+  "name": "@tinyops/outcomeloop",
+  "version": "0.1.0",
+  "description": "An outcome-verified watchdog for long-running Codex work.",
+  "type": "module",
+  "private": false,
+  "bin": {
+    "outcomeloop": "./src/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test",
+    "test:sandbox": "node scripts/run-sandbox-suite.js",
+    "demo:setup": "node scripts/setup-resume-demo.js",
+    "check": "npm test && node scripts/check-project.js"
+  },
+  "keywords": [
+    "codex",
+    "gpt-5.6",
+    "agent",
+    "verification",
+    "long-running-agent"
+  ],
+  "author": "TinyOps Studio LLC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinyopsstudio/outcomeloop.git"
+  },
+  "homepage": "https://github.com/tinyopsstudio/outcomeloop#readme",
+  "bugs": {
+    "url": "https://github.com/tinyopsstudio/outcomeloop/issues"
+  },
+  "license": "MIT"
+}
