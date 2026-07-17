@@ -1,6 +1,6 @@
 # OutcomeLoop
 
-[![HOL Guard Scanner](https://github.com/tinyopsstudio/outcomeloop/actions/workflows/plugin-security.yml/badge.svg)](https://github.com/tinyopsstudio/outcomeloop/actions/workflows/plugin-security.yml)
+[![HOL Guard Scanner](https://github.com/tinyopsstudio/outcomeloop-build-week/actions/workflows/plugin-security.yml/badge.svg)](https://github.com/tinyopsstudio/outcomeloop-build-week/actions/workflows/plugin-security.yml)
 
 **Codex can stop. The outcome cannot.**
 
@@ -8,7 +8,7 @@ OutcomeLoop keeps one GPT-5.6 Codex session moving until a user-supplied externa
 
 ![OutcomeLoop dashboard showing a verified four-turn GPT-5.6 run](docs/dashboard.png)
 
-[Open the live verified demo](https://tinyopsstudio.github.io/outcomeloop/)
+[Open the live verified demo](https://tinyopsstudio.github.io/outcomeloop-build-week/)
 
 ## Why
 
@@ -189,7 +189,7 @@ OutcomeLoop does not make an unsafe objective safe or prove that a weak verifier
 OutcomeLoop was created during the July 13-21, 2026 submission period for the **Developer Tools** track. The project uses Codex and GPT-5.6 as required by the [official challenge](https://openai.devpost.com/) and includes a public repository, MIT license, runnable demo, setup instructions, test suite, development evidence, and a public sub-three-minute video.
 
 - [Watch the demo](https://www.youtube.com/watch?v=IaR34oyWNbc)
-- [Stable v0.1.1 release](https://github.com/tinyopsstudio/outcomeloop/releases/tag/v0.1.1)
+- [Stable v0.1.1 release](https://github.com/tinyopsstudio/outcomeloop-build-week/releases/tag/v0.1.1)
 - [Build Week evidence](docs/build-week-evidence.md)
 - [Architecture source](docs/architecture.mmd)
 - [Demo video script](docs/demo-video-script.md)

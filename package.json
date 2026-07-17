@@ -38,14 +38,14 @@
   "author": "TinyOps Studio LLC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tinyopsstudio/outcomeloop.git"
+    "url": "git+https://github.com/tinyopsstudio/outcomeloop-build-week.git"
   },
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/tinyopsstudio/outcomeloop#readme",
+  "homepage": "https://github.com/tinyopsstudio/outcomeloop-build-week#readme",
   "bugs": {
-    "url": "https://github.com/tinyopsstudio/outcomeloop/issues"
+    "url": "https://github.com/tinyopsstudio/outcomeloop-build-week/issues"
   },
   "license": "MIT"
 }
