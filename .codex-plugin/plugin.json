@@ -6,6 +6,10 @@
     "name": "TinyOps Studio LLC",
     "url": "https://tinyopsstudio.com"
   },
+  "homepage": "https://tinyopsstudio.github.io/outcomeloop/",
+  "repository": "https://github.com/tinyopsstudio/outcomeloop",
+  "license": "MIT",
+  "keywords": ["codex", "agent", "verification", "long-running-agent"],
   "skills": "./skills/",
   "interface": {
     "displayName": "OutcomeLoop",
@@ -14,6 +18,13 @@
     "developerName": "TinyOps Studio LLC",
     "category": "Developer Tools",
     "capabilities": ["long-running tasks", "external verification", "durable checkpoints"],
-    "defaultPrompt": "Use OutcomeLoop to turn this goal into a verified completion contract and keep working until it passes."
+    "websiteURL": "https://tinyopsstudio.github.io/outcomeloop/",
+    "privacyPolicyURL": "https://tinyopsstudio.com/privacy",
+    "termsOfServiceURL": "https://tinyopsstudio.com/terms",
+    "defaultPrompt": "Use OutcomeLoop to turn this goal into a verified completion contract and keep working until it passes.",
+    "brandColor": "#26C28B",
+    "composerIcon": "./assets/outcomeloop-mark.svg",
+    "logo": "./assets/outcomeloop-mark.svg",
+    "screenshots": ["./docs/dashboard.png"]
   }
 }

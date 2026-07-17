@@ -1,0 +1,8 @@
+[scanner]
+profile = "public-marketplace"
+ignore_paths = [
+  ".demo/**",
+  "test/agent-sandbox.test.js",
+  "test/process.test.js",
+  "*.tgz",
+]

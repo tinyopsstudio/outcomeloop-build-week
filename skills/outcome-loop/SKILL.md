@@ -1,6 +1,7 @@
 ---
 name: outcome-loop
 description: Keep a Codex goal active until an external verifier proves the outcome. Use for long-running work, tasks that must survive context compaction or premature handoffs, explicit completion contracts, owner-gated operations, or requests to continue until a measurable result is achieved.
+license: MIT
 ---
 
 # OutcomeLoop

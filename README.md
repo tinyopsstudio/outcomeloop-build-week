@@ -1,5 +1,7 @@
 # OutcomeLoop
 
+[![HOL Guard Scanner](https://github.com/tinyopsstudio/outcomeloop/actions/workflows/plugin-security.yml/badge.svg)](https://github.com/tinyopsstudio/outcomeloop/actions/workflows/plugin-security.yml)
+
 **Codex can stop. The outcome cannot.**
 
 OutcomeLoop keeps one GPT-5.6 Codex session moving until a user-supplied external verifier passes. Agent messages are evidence candidates, never completion.
@@ -171,7 +173,7 @@ Place every verifier script and fixed fixture outside the writable workspace and
 - An authenticated launcher channel distinguishes normal exits from signals and untrusted verifier output.
 - The verifier runs once before Codex, so already-complete work is sealed without mutation.
 - Stored output is redacted and size-bounded.
-- `danger-full-access` contracts are rejected.
+- Contracts requesting unrestricted filesystem access are rejected.
 - Controller state and signing keys are stored under `~/.outcomeloop`, outside the task workspace.
 - Receipts use Ed25519 signatures anchored to the controller's trusted public key.
 - Concurrent runs for one contract are serialized with an exclusive lock.
@@ -187,7 +189,7 @@ OutcomeLoop does not make an unsafe objective safe or prove that a weak verifier
 OutcomeLoop was created during the July 13-21, 2026 submission period for the **Developer Tools** track. The project uses Codex and GPT-5.6 as required by the [official challenge](https://openai.devpost.com/) and includes a public repository, MIT license, runnable demo, setup instructions, test suite, development evidence, and a public sub-three-minute video.
 
 - [Watch the demo](https://www.youtube.com/watch?v=IaR34oyWNbc)
-- [Stable v0.1.0 release](https://github.com/tinyopsstudio/outcomeloop/releases/tag/v0.1.0)
+- [Stable v0.1.1 release](https://github.com/tinyopsstudio/outcomeloop/releases/tag/v0.1.1)
 - [Build Week evidence](docs/build-week-evidence.md)
 - [Architecture source](docs/architecture.mmd)
 - [Demo video script](docs/demo-video-script.md)
