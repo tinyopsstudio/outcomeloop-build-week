@@ -183,6 +183,10 @@ OutcomeLoop was created during the July 13-21, 2026 submission period for the **
 - [Architecture source](docs/architecture.mmd)
 - [Demo video script](docs/demo-video-script.md)
 
+## Implementation Support
+
+OutcomeLoop is MIT-licensed and self-hostable. Teams that want a custom verifier adapter, CI integration, or a production rollout can use TinyOps Studio's [$1,000 AI Agent Workflow Sprint](https://whop.com/joined/tinyops-studio-llc/products/ai-agent-workflow-sprint/) or contact [support@tinyopsstudio.com](mailto:support@tinyopsstudio.com).
+
 ## License
 
 MIT
