@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
-      - uses: hashgraph-online/ai-plugin-scanner-action@e7916cca3c5159750f8f8bd24fa6cc0c1f0a4d03 # v1
+      - uses: hashgraph-online/ai-plugin-scanner-action@3debb48036bd5c261161bfc7df0d7e25a7d6299e # v1
         with:
           plugin_dir: "."
           fail_on_severity: high
