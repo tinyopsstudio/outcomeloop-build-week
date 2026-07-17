@@ -177,8 +177,10 @@ OutcomeLoop does not make an unsafe objective safe or prove that a weak verifier
 
 ## OpenAI Build Week
 
-OutcomeLoop was created during the July 13-21, 2026 submission period for the **Developer Tools** track. The project uses Codex and GPT-5.6 as required by the [official challenge](https://openai.devpost.com/) and includes a public repository, MIT license, runnable demo, setup instructions, test suite, development evidence, and a sub-three-minute demo plan.
+OutcomeLoop was created during the July 13-21, 2026 submission period for the **Developer Tools** track. The project uses Codex and GPT-5.6 as required by the [official challenge](https://openai.devpost.com/) and includes a public repository, MIT license, runnable demo, setup instructions, test suite, development evidence, and a public sub-three-minute video.
 
+- [Watch the demo](https://www.youtube.com/watch?v=IaR34oyWNbc)
+- [Stable v0.1.0 release](https://github.com/tinyopsstudio/outcomeloop/releases/tag/v0.1.0)
 - [Build Week evidence](docs/build-week-evidence.md)
 - [Architecture source](docs/architecture.mmd)
 - [Demo video script](docs/demo-video-script.md)
