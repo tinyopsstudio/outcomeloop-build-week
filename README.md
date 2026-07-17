@@ -74,6 +74,13 @@ GPT-5.6 does the semantic work: inspect the environment, choose actions, edit fi
 
 No npm dependencies are required.
 
+## Install The CLI
+
+```bash
+npm install --global @tinyopsstudio/outcomeloop
+outcomeloop --help
+```
+
 ## Install The Plugin
 
 From GitHub:

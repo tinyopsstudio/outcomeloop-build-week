@@ -1,12 +1,23 @@
 {
-  "name": "@tinyops/outcomeloop",
-  "version": "0.1.0",
+  "name": "@tinyopsstudio/outcomeloop",
+  "version": "0.1.1",
   "description": "An outcome-verified watchdog for long-running Codex work.",
   "type": "module",
   "private": false,
   "bin": {
-    "outcomeloop": "./src/cli.js"
+    "outcomeloop": "src/cli.js"
   },
+  "files": [
+    ".agents",
+    ".codex-plugin",
+    "assets",
+    "docs",
+    "public",
+    "schemas",
+    "scripts",
+    "skills",
+    "src"
+  ],
   "engines": {
     "node": ">=20"
   },
@@ -28,6 +39,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tinyopsstudio/outcomeloop.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "homepage": "https://github.com/tinyopsstudio/outcomeloop#readme",
   "bugs": {
