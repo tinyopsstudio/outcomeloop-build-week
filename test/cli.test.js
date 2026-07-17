@@ -16,6 +16,23 @@ async function protectedContractDir() {
   return mkdtemp(path.join(TEST_ROOT, 'case-'));
 }
 
+async function fakeCodexSandbox(directory) {
+  const executable = path.join(directory, 'codex-sandbox-shim.mjs');
+  await writeFile(executable, `#!/usr/bin/env node
+import { spawn } from 'node:child_process';
+const args = process.argv.slice(2);
+const separator = args.indexOf('--');
+if (args[0] !== 'sandbox' || separator === -1 || !args[separator + 1]) process.exit(2);
+const child = spawn(args[separator + 1], args.slice(separator + 2), { stdio: 'inherit' });
+child.once('error', (error) => { process.stderr.write(error.message + '\\n'); process.exit(1); });
+child.once('exit', (code, signal) => {
+  if (signal) process.kill(process.pid, signal);
+  else process.exit(code ?? 1);
+});
+`, { mode: 0o755 });
+  return executable;
+}
+
 test('init stops parsing OutcomeLoop flags at the command separator', async () => {
   const directory = await mkdtemp(path.join(os.tmpdir(), 'outcomeloop-cli-'));
   const result = await spawnCapture(process.execPath, [
@@ -35,12 +52,13 @@ test('init stops parsing OutcomeLoop flags at the command separator', async () =
 test('verify-receipt defaults to outcomeloop.json', async () => {
   const directory = await mkdtemp(path.join(os.tmpdir(), 'outcomeloop-cli-'));
   const contractPath = path.join(directory, 'outcomeloop.json');
+  const codexShim = await fakeCodexSandbox(directory);
   await writeFile(contractPath, `${JSON.stringify({
     version: 1,
     objective: 'Recognize an already complete contract',
     completion: { command: [process.execPath, '-e', 'process.exit(0)'] },
   }, null, 2)}\n`);
-  const run = await spawnCapture(process.execPath, [CLI, 'run'], { cwd: directory, timeoutMs: 10_000 });
+  const run = await spawnCapture(process.execPath, [CLI, 'run', '--codex', codexShim], { cwd: directory, timeoutMs: 10_000 });
   assert.equal(run.code, 0, run.stderr);
   const verification = await spawnCapture(process.execPath, [CLI, 'verify-receipt'], { cwd: directory, timeoutMs: 10_000 });
   assert.equal(verification.code, 0, verification.stderr);

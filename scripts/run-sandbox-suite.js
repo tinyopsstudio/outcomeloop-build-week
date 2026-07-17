@@ -1,6 +1,10 @@
 import { spawn } from 'node:child_process';
 
-const child = spawn(process.execPath, ['--test', 'test/verifier-sandbox.test.js'], {
+const child = spawn(process.execPath, [
+  '--test',
+  'test/agent-sandbox.test.js',
+  'test/verifier-sandbox.test.js',
+], {
   env: { ...process.env, OUTCOMELOOP_TEST_SANDBOX: '1' },
   stdio: 'inherit',
 });
