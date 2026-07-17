@@ -88,7 +88,7 @@ outcomeloop --help
 From GitHub:
 
 ```bash
-codex plugin marketplace add tinyopsstudio/outcomeloop
+codex plugin marketplace add tinyopsstudio/outcomeloop-build-week
 codex plugin add outcomeloop@outcomeloop
 ```
 
